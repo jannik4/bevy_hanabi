@@ -12,7 +12,7 @@ const DISPATCH_INDIRECT_STRIDE: u32 = {{DISPATCH_INDIRECT_STRIDE}} / 4u;
 @group(0) @binding(0) var<storage, read_write> render_effect_indirect_buffer : array<u32>;
 @group(0) @binding(1) var<storage, read_write> render_group_indirect_buffer : array<u32>;
 @group(0) @binding(2) var<storage, read_write> dispatch_indirect_buffer : array<u32>;
-@group(0) @binding(3) var<storage, read> group_buffer : array<ParticleGroup>;
+@group(0) @binding(3) var<storage, read_write> group_buffer : array<ParticleGroup>;
 @group(1) @binding(0) var<uniform> sim_params : SimParams;
 
 /// Calculate the indirect workgroups counts based on the number of particles alive.
